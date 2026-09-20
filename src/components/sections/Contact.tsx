@@ -1,0 +1,6 @@
+import { ArrowUpRight } from 'lucide-react'
+import { socialLinks } from '../../data/content'
+import { Section } from '../layout/Section'
+import { Reveal } from '../ui/Reveal'
+
+export const Contact = () => <Section id="contact" className="py-24 text-center md:py-36"><Reveal><p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-accent">04 / Contact</p><h2 className="mx-auto mt-5 max-w-4xl font-display text-5xl leading-[0.95] tracking-[-0.055em] text-ink dark:text-paper sm:text-7xl">Let's build something <span className="text-accent">intelligent.</span></h2><p className="mx-auto mt-7 max-w-xl text-sm leading-7 text-muted">Interested in computer vision, applied ML, LLM applications, RAG systems or data projects? I'm always open to interesting conversations, collaborations and internship opportunities.</p><div className="mt-8 flex flex-wrap justify-center gap-3">{socialLinks.map((link) => <a key={link.label} href={link.href} target={link.external ? '_blank' : undefined} rel={link.external ? 'noreferrer' : undefined} className="inline-flex items-center gap-2 rounded-full border border-line-strong px-4 py-3 font-mono text-[0.68rem] uppercase tracking-[0.08em] text-muted transition hover:border-accent hover:text-accent">{link.label}<ArrowUpRight size={14} /></a>)}</div></Reveal></Section>

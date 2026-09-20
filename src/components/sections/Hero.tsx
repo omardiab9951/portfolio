@@ -1,0 +1,9 @@
+import { ArrowUpRight } from 'lucide-react'
+import { site } from '../../data/content'
+import { Container } from '../layout/Container'
+import { Button } from '../ui/Button'
+import { Reveal } from '../ui/Reveal'
+
+const profilePhoto = `${import.meta.env.BASE_URL}formal2.jpg`
+
+export const Hero = () => <header id="top" className="relative overflow-hidden py-16 sm:py-24 lg:py-30"><div className="pointer-events-none absolute right-[-10%] top-[-12%] h-[32rem] w-[32rem] rounded-full bg-accent/10 blur-3xl" /><Container className="relative grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16"><Reveal><div className="mb-7 inline-flex items-center gap-3 rounded-full border border-line-strong bg-accent/10 px-3.5 py-2 font-mono text-[0.67rem] tracking-[0.08em] text-accent"><span className="h-2 w-2 rounded-full bg-accent shadow-dot" />{site.availability}</div><h1 className="font-display text-[clamp(3.5rem,10vw,7.6rem)] leading-[0.88] tracking-[-0.06em] text-ink dark:text-paper"><span className="block">{site.name}</span><span className="mt-4 block text-accent">{site.role}</span></h1><p className="mt-7 max-w-2xl font-display text-xl leading-snug text-ink/80 dark:text-paper/80 sm:text-2xl">{site.headline}</p><p className="mt-6 max-w-xl text-base leading-8 text-ink/65 dark:text-paper/65">{site.description}</p><div className="mt-8 flex flex-wrap gap-3"><Button href="#work">Explore my work <ArrowUpRight size={15} /></Button><Button href="https://www.linkedin.com/in/omar9951/" target="_blank" rel="noreferrer" variant="secondary">LinkedIn ↗</Button></div></Reveal><Reveal className="lg:justify-self-end"><div className="relative aspect-square w-full max-w-[390px] rotate-2 rounded-[2rem] border border-line-strong bg-card p-2 shadow-glow transition duration-500 hover:rotate-0"><img src={profilePhoto} alt={site.profileAlt} className="h-full w-full rounded-[1.55rem] object-cover" fetchPriority="high" /></div></Reveal></Container></header>
